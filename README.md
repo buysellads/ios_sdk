@@ -1,10 +1,11 @@
+
 Table of Contents
 =================
 - [CPM Ad Serving](#buysellads-cpm-ad-serving)
 - [CPI Ad Serving](#buysellads-cpi-adserve-side)
 - [CPI Install Tracking](#buysellads-cpi-install-tracking)
 - [Included Frameworks](#included-frameworks)
-
+- [License](#license)
 
 
 BuySellAds CPM Ad Serving
@@ -121,3 +122,9 @@ Included Frameworks
 The CPI and CPM frameworks use the [JSONKit](https://github.com/johnezang/JSONKit) library for accessing BuySellAds server via the json api's.
 JSONKit is dual licensed under either the terms of the **BSD License**, or alternatively under the terms of the **Apache License**, Version 2.0.
 Copyright © 2011, John Engelhart.
+
+
+
+License
+=======
+The BuySellAds CPI and CPM SDK's are licensed under the BSD 3-clause license
