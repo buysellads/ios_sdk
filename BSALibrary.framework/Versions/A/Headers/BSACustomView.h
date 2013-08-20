@@ -15,11 +15,13 @@
 
 @protocol BSACustomViewDelegate
 - (void) adOverlayTouchedWithAdObject:(BSAObjectAd *)adObject;
+@optional
+- (void) adLoadedForView:(UIView *)view;
+- (void) adLoadFailedForView:(UIView *)view;
 @end
-
 
 @interface BSACustomView : UIView
 @property (nonatomic, strong) id<BSACustomViewDelegate> delegate;
 @property (nonatomic, strong) NSString *zoneKey;
-- (id) initWithFrame:(CGRect)frame andAdObject:(BSAObjectAd *)adObject;
+- (id) initWithFrame:(CGRect)frame andAdObject:(BSAObjectAd *)adObject andDelegate:(id<BSACustomViewDelegate>) customViewDelegate;
 @end

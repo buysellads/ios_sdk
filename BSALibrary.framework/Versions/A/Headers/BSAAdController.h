@@ -11,10 +11,20 @@
 #import "BSAStaticAd.h"
 
 
+@protocol BSAAdControllerDelegate
+@optional
+- (void) adLoadedForView:(UIView *)view;
+- (void) adLoadFailedForView:(UIView *)view;
+- (void) adViewCreated:(UIView *)view;
+- (void) adViewFailedToCreate:(UIView *)view;
+@end
+
 
 @interface BSAAdController : NSObject  <BSACustomViewDelegate>
+@property (nonatomic, strong) id<BSAAdControllerDelegate> delegate;
 @property (nonatomic, strong) UIView *customView;
 @property (nonatomic, strong) BSAStaticAd *ad;
 + (id) createControllerFromZoneKey:(NSString *)zonekey;
++ (id) createControllerFromZoneKey:(NSString *)zonekey withDelegate:(id<BSAAdControllerDelegate>) adControllerDelegate;
 + (id) createControllerFromZoneKey:(NSString *)zonekey withCategory:(NSString *)category;
 @end
