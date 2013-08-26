@@ -21,7 +21,7 @@
 
 
 @interface BSAAdController : NSObject  <BSACustomViewDelegate>
-@property (nonatomic, strong) id<BSAAdControllerDelegate> delegate;
+@property (nonatomic, weak) id<BSAAdControllerDelegate> delegate;
 @property (nonatomic, strong) UIView *customView;
 @property (nonatomic, strong) BSAStaticAd *ad;
 + (id) createControllerFromZoneKey:(NSString *)zonekey;

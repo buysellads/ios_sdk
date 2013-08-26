@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BSANetworkConnectProtocol.h"
 
-@protocol BSANetworkConnectDelegate;
 
 @interface BSAInstallTracker : NSObject <BSANetworkConnectDelegate>
 + (id) confirmInstallationForZoneKey:(NSString *)zoneKey;
